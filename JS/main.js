@@ -31,24 +31,27 @@ searchBtn.addEventListener("click", function () {
     const saleEl = document.getElementById('sale-option');
     const sale = saleEl.value;
     let priceWithSale;
+    
 
     if(fullName.value == ""){
         alert("signore/a il nomeeeeeeeeeee!")
     }
 
     if(inKm.value == ""){
-        alert("inserisci un numero di km ktm!")
+        alert("l'inteligenza artificiale non potra mai arrivare ad i livelli di un uomo ma se non metti i km mi sa che ti ha superato ! ")
     }
 
     if (sale == 'under18') {
-        priceWithSale = noSaleKm - (noSaleKm * 0.2)
+        priceWithSale = noSaleKm - (noSaleKm * 0.2);
     }
     else if (sale == "over64") {
-        priceWithSale = noSaleKm - (noSaleKm * 0.4)
+        priceWithSale = noSaleKm - (noSaleKm * 0.4);
     }
     else {
-        priceWithSale = noSaleKm
+        priceWithSale = noSaleKm;
     }
+    const prezzoFinale = document.querySelector('.outprice')
+    prezzoFinale.innerHTML= priceWithSale.toFixed(2)
 
     console.log(priceWithSale);
 
