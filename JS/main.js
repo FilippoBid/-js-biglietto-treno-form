@@ -20,6 +20,7 @@ if (userAge < 18) {
 const searchBtn = document.querySelector('.search');
 const deleteBtn = document.querySelector('.delete');
 
+
 searchBtn.addEventListener("click", function () {
     //nome preso e messo in output
     const fullName = document.querySelector('.nome-cognome');
@@ -30,15 +31,31 @@ searchBtn.addEventListener("click", function () {
     const noSaleKm = parseInt(inKm.value) * 0.21;
     const saleEl = document.getElementById('sale-option');
     const sale = saleEl.value;
+    const cartaUno = document.getElementById ('cartauno');
+    const cartaDue = document.getElementById ('cartadue');
+    const carrozza = document.querySelector('.carrozza');
+    const numeroTreno = document.querySelector('.numero-treno');
+    let randomDieci = Math.floor (Math.random () * 10)
+    let randomMille = Math.floor (Math.random () * 10000)
+    
     let priceWithSale;
     
-
+ //do le condizioni per l'inserimento dei dati  
     if(fullName.value == ""){
         alert("signore/a il nomeeeeeeeeeee!")
     }
 
     if(inKm.value == ""){
         alert("l'inteligenza artificiale non potra mai arrivare ad i livelli di un uomo ma se non metti i km mi sa che ti ha superato ! ")
+    }
+    if(!fullName.value == ""){
+        cartaUno.className = "d-none";
+        cartaDue.className += "d-block";
+    }
+
+    if(!inKm.value == ""){
+        cartaUno.className = "d-none";
+        cartaDue.className += "d-block";
     }
 
     if (sale == 'under18') {
@@ -53,8 +70,21 @@ searchBtn.addEventListener("click", function () {
     const prezzoFinale = document.querySelector('.outprice')
     prezzoFinale.innerHTML= priceWithSale.toFixed(2)
 
-    console.log(priceWithSale);
+    carrozza.innerHTML = randomDieci
+    numeroTreno.innerHTML = randomMille
+    
+    console.log(carrozza);
 
 
 
 });
+
+
+
+
+
+//funzione bottone lascia stare
+deleteBtn.addEventListener("click",  function () {
+
+    window.location.reload();
+})

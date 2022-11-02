@@ -12,30 +12,41 @@
 </head>
 <body>
     <div class="container  ">
-        <div class="card w-100 bg-danger d-flex justify-content-center p-5">
-            <img src="https://imageresizer.static9.net.au/xkCCUmNYbG_m4cgUNI_YVSQKh7o=/696x552/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2Fnetwork%2Fimages%2F2017%2F03%2F14%2F14%2F24%2Ffaceswap1403thumb.jpg" alt="bimbo felicio" class="card-img-top w-50 m-auto">
-            <div class="card-body">
+        <div id="cartauno" class="card w-100 bg-danger d-flex justify-content-center p-5">
+            <img src="https://imageresizer.static9.net.au/xkCCUmNYbG_m4cgUNI_YVSQKh7o=/696x552/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2Fnetwork%2Fimages%2F2017%2F03%2F14%2F14%2F24%2Ffaceswap1403thumb.jpg" alt="bimbo felicio" class="card-img-top w-75 m-auto">
+            <div class="card-body text-center">
                 <h5 class="card-title">Benvenuti o bentornati se siete ancora vivi</h5>
                 <p class="card-text">per sta volta vi é andata bene non ce fila quindi prenditi pure tutto il tempo che vuoi!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><input type="text" class="nome-cognome" placeholder="nomeeeee e cognomeee grazziee!"></li>
-                <li class="list-group-item"><input type="text" class= "distance" placeholder=" per quanti km ti dobbiamo sopportare ? "></li>
-                <select id="sale-option" class="form-control">
+                <li class="list-group-item rounded-2 mb-3"><input type="text" class="nome-cognome w-100 " placeholder="nomeeeee e cognomeee grazziee!"></li>
+                <li class="list-group-item rounded-2 mb-3"><input type="text" class= "distance w-100" placeholder=" per quanti km ti dobbiamo sopportare ? "></li>
+                <select id="sale-option" class="form-control rounded-2">
                             <option value="none">-</option>
-                            <option value="under18">maggiorenne</option>
+                            <option value="under18">minorenne</option>
                             <option value="over64">over64</option>
                           </select>
                 </ul>
-                <div class="card-body">
-                  <button class="search btn btn-dark rounded-5">calcola </button>
-                  <button class="delete btn btn-primary rounded-5">lascia stare!</button>
+                <div class="card-body text-center">
+                  <button class="search btn btn-dark rounded-5 me-5">calcola </button>
+                  <button class="delete btn btn-primary rounded-5 ms-5">lascia stare!</button>
                 </div>
             </div>
-
+            
         </div>
-        <div>Finalmente hai deciso di darci i tuoi soldi <span class="outName"></span></div>
-        <div>guarda ti costerebbe molto ma solo a te faccio <span class="outPrice"></span>€</div>
+        <div class="container">
+             <div id="cartadue" class="card bg-danger text-white d-none">
+                 <img class="card-img w-50" src="https://i.kym-cdn.com/photos/images/facebook/000/746/372/ae8.jpg" alt="Card image">
+                 <div class="card-img-overlay text-end p-2">
+                   <h5 class="card-title mb-5">Ecco la tua carta!!</h5>
+                   <h4 class="card-text mb-4">Finalmente! <br> Hai deciso di darci i tuoi soldi <br><span class="outName"></span></h4>
+                   <h4 class="card-text mb-4">Guarda ti costerebbe molto <br> ma solo a te faccio <span class="outPrice"></span>€</h4>
+                   <h4 class="card-text mb-4">Sei nella carrozza numero <span class="carrozza"></span></h4>
+                   <h4 class="card-text mb-4">se il treno non ti risponde <br> puoi trovarlo con il numero <span class="numero-treno"></span></h4>
+                   <button class="delete btn btn-light rounded-5">lascia stare!</button>
+                 </div>
+             </div>
+        </div>
     </div>
 
     <script src="JS/main.js"></script>
