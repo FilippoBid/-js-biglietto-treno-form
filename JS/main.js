@@ -21,6 +21,7 @@ const searchBtn = document.querySelector('.search');
 const deleteBtn = document.querySelector('.delete');
 
 
+
 searchBtn.addEventListener("click", function () {
     //nome preso e messo in output
     const fullName = document.querySelector('.nome-cognome');
@@ -37,6 +38,7 @@ searchBtn.addEventListener("click", function () {
     const numeroTreno = document.querySelector('.numero-treno');
     let randomDieci = Math.floor (Math.random () * 10)
     let randomMille = Math.floor (Math.random () * 10000)
+    const deleteCardBtn = document.getElementById ('cancellare');
     
     let priceWithSale;
     
@@ -74,6 +76,10 @@ searchBtn.addEventListener("click", function () {
     numeroTreno.innerHTML = randomMille
     
     console.log(carrozza);
+    deleteCardBtn.addEventListener("click",  function () {
+
+        window.location.reload();
+    })
 
 
 
